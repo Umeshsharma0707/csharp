@@ -24,7 +24,14 @@ internal class Program
         //  fse.InsertAllDataUsingTextReader();
 
 
-        fse.GetAllDataUsingTextReader();
+        try
+        {
+            fse.GetAllDataUsingTextReader();
+        }
+        catch
+        {
+            Console.WriteLine("no file found");
+        }
 
     }
 }
