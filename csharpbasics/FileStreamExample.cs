@@ -124,7 +124,6 @@ namespace csharpbasics
             {
                 Console.WriteLine("string value : " + br.ReadString());
                 Console.WriteLine("Boolean value : " + br.ReadBoolean());
-
             }
         }
     }
