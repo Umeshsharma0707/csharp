@@ -33,5 +33,26 @@ internal class Program
             Console.WriteLine("no file found");
         }
 
+        try
+        {
+            fse.WriteUsingBinaryWriter();
+        }
+        catch
+        {
+            Console.WriteLine("error occurs");
+        }
+
+        try
+        {
+            fse.ReadBinaryWriter();
+        }
+        catch (Exception ex)
+        {
+            {
+
+                Console.WriteLine("error occurs");
+                Console.WriteLine(ex);
+            }
+        }
     }
 }

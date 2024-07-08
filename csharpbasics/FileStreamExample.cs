@@ -105,6 +105,27 @@ namespace csharpbasics
 
         }
 
+        public void WriteUsingBinaryWriter()
+        {
+            using (BinaryWriter bw = new BinaryWriter(File.Open("E:\\two.txt", FileMode.Create)))
+            {
+                bw.Write("name : umesh sharma");
+                bw.Write("age : 21");
+                bw.Write(true);
 
+            }
+                Console.WriteLine("file created");
+
+        }
+
+        public void ReadBinaryWriter()
+        {
+            using (BinaryReader br = new BinaryReader(File.Open("E:\\two.txt", FileMode.Open)))
+            {
+                Console.WriteLine("string value : " + br.ReadString());
+                Console.WriteLine("Boolean value : " + br.ReadBoolean());
+
+            }
+        }
     }
 }
